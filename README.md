@@ -85,6 +85,8 @@ https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 
 # 6 Flow charts
 <img width="538" height="433" alt="image" src="https://github.com/user-attachments/assets/c2b0c94c-2771-4ebb-9174-6891ef54f6b4" />
+<img width="538" height="219" alt="image" src="https://github.com/user-attachments/assets/bf104a21-4f22-4dc0-8357-1d797594b13e" />
+
 <img width="1158" height="348" alt="image" src="https://github.com/user-attachments/assets/47c15eca-a427-4bd8-9e55-b79d15572a16" />
 
 
