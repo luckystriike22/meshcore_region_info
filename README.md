@@ -8,7 +8,8 @@
   - [4.2 Set region via Command line](#42-set-region-via-command-line)
   - [4.2 Set region in App](#42-set-region-in-app)
 - [5. Add regions that can be used for channels (client app)](#5-add-regions-that-can-be-used-for-channels-client-app)
-- [5 Flow charts](#5-flow-charts)
+- [6 Flow charts](#6-flow-charts)
+- [7 Interesting links](#7-interesting-links)
 
 
 # 1. Meshcore region guide
@@ -88,6 +89,11 @@ https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 <img width="538" height="219" alt="image" src="https://github.com/user-attachments/assets/bf104a21-4f22-4dc0-8357-1d797594b13e" />
 
 <img width="1158" height="348" alt="image" src="https://github.com/user-attachments/assets/47c15eca-a427-4bd8-9e55-b79d15572a16" />
+
+# 7 interesting links
+- regions overview: https://www.youtube.com/watch?v=2LPwjfuCr3Y
+- channels forum discussion: https://forum.letsmesh.net/t/regio-codes-nederland/301
+- region filtering: https://buymeacoffee.com/ripplebiz/region-filtering
 
 
 
