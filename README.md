@@ -76,8 +76,14 @@ region save (By saving, you'll not need a reboot)
 5. After creating regions, you can apply one to a channel. You can change it by clicking the channel name. The app will remember the region for each channel.
 <img width="293" height="292" alt="image" src="https://github.com/user-attachments/assets/f70d8236-f4d5-45a4-9445-407d122ae94f" />
 
+# 5 region codes
+Provinces: 
+https://service.unece.org/trade/locode/2024-2%20SubdivisionCodes.htm
 
-# 5 Flow charts
+Countries:
+https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+
+# 6 Flow charts
 <img width="538" height="433" alt="image" src="https://github.com/user-attachments/assets/c2b0c94c-2771-4ebb-9174-6891ef54f6b4" />
 <img width="1158" height="348" alt="image" src="https://github.com/user-attachments/assets/47c15eca-a427-4bd8-9e55-b79d15572a16" />
 
