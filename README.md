@@ -38,7 +38,7 @@ There are two ways to set the region on your repeater:
 
 ## 4.2 Set region via Command line
 It is possible to add more than one region. This is recommended when you live in an area that borders multiple regions.  
-For example: my repeater is located in The Netherlands — region Limburg
+For example: my repeater is located in The Netherlands — region Limburg. Because limburg borders it is best practice to allow nearby regions (North Brabant)
 Setting your region:
 ```
 region put nl-li (setting it to the Netherlands and Limburg (li))
@@ -80,6 +80,8 @@ region save (By saving, you'll not need a reboot)
 
 # 5 Flow charts
 <img width="538" height="433" alt="image" src="https://github.com/user-attachments/assets/c2b0c94c-2771-4ebb-9174-6891ef54f6b4" />
+<img width="1158" height="348" alt="image" src="https://github.com/user-attachments/assets/47c15eca-a427-4bd8-9e55-b79d15572a16" />
+
 
 
 
