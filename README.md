@@ -24,7 +24,7 @@ Meshcore regions are introduced to limit the load on our mesh network. By adding
 # 3. Important notes
 - At the moment of writing, regions will only apply to channels and will not affect direct messages (DMs).
 - By default, a repeater will have a region set to *. This * means a repeater will forward messages without a region flag added to that message.  
-This will prevent blocking messages and allow public channels to be world-scoped.
+  This will prevent blocking messages and allow public channels to be world-scoped.
 - At the time of writing, there is no working hierarchy. This means nl (The Netherlands) is a scope, but nl-li (The Netherlands - Limburg) is as well, so it will allow both.
 
 # 4. Setting a region on your repeater
