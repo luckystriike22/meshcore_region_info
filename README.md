@@ -12,8 +12,7 @@
 
 
 # 1. Meshcore region guide
-Meshcore regions are introduced to limit the load on our mesh network. By adding regions, the network will contain fewer unnecessary hops.  
-IMPORTANT NOTE: At the moment of writing, regions will only apply to channels and will not affect direct messages (DMs).
+Meshcore regions are introduced to limit the load on our mesh network. By adding regions, the network will contain fewer unnecessary hops. At the moment of writing, regions will only apply to channels and will not affect direct messages (DMs).
 
 # 2. The core concept
 1. A repeater adds regions
@@ -23,6 +22,7 @@ IMPORTANT NOTE: At the moment of writing, regions will only apply to channels an
 5. Only repeaters that contain the provided region flag will repeat that message
 
 # 3. Important notes
+- At the moment of writing, regions will only apply to channels and will not affect direct messages (DMs).
 - By default, a repeater will have a region set to *. This * means a repeater will forward messages without a region flag added to that message.  
 This will prevent blocking messages and allow public channels to be world-scoped.
 - At the time of writing, there is no working hierarchy. This means nl (The Netherlands) is a scope, but nl-li (The Netherlands - Limburg) is as well, so it will allow both.
