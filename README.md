@@ -14,7 +14,8 @@
 
 # 1. Meshcore region guide
 Meshcore regions are introduced to limit the load on our mesh network. By adding regions, the network will contain fewer unnecessary hops. At the moment of writing, regions will only apply to channels and will not affect direct messages (DMs).
-**IMPORTANT:** Clear description video: https://www.youtube.com/watch?v=2LPwjfuCr3Y
+
+**IMPORTANT to watch first:** Clear description video: https://www.youtube.com/watch?v=2LPwjfuCr3Y
 
 # 2. The core concept
 1. A repeater adds regions
