@@ -791,11 +791,28 @@ The `txdelay` parameter introduces a random delay before retransmitting flood pa
 **Special note:** In KISS modem mode, `txdelay` is used as a timer before sending (in units of 10ms). Setting it too low may cause more collisions; too high increases latency.
 
 #### How rxdelay Works
-The `rxdelay` parameter adds a base delay to the processing of received packets. This is mainly for experimental or debugging purposes, such as simulating network latency or testing how the system behaves under delayed processing. It is not recommended for normal operation, as it will slow down message handling and can negatively impact network responsiveness.
 
-**When to use rxdelay:**
-- **Normal operation:** Keep at 0 for best performance.
-- **Testing/debugging:** Set to a higher value only if you need to simulate slow processing or network latency.
+The `rxdelay` parameter introduces a base delay before processing and forwarding received packets. This delay is critical for duplicate suppression in mesh networks:
+
+- **How it works in code:** When a packet is received, the node waits for the rxdelay period (plus any score-based delay) before deciding to forward it. During this window, if the node receives the same packet from another neighbor, it recognizes the duplicate and suppresses its own retransmission. This reduces redundant flooding and network congestion, especially in dense deployments.
+
+- **Why/when to use:**
+  - **Normal operation:** Use a small but nonzero rxdelay in dense or multi-hop networks to maximize duplicate suppression and minimize unnecessary retransmissions.
+  - **Testing/debugging:** Increase rxdelay to simulate higher latency or to observe duplicate suppression in action.
+  - **Low-traffic/simple networks:** rxdelay can be set to 0 for fastest forwarding, but this may increase redundant traffic.
+
+- **Parameter effects:**
+  - Higher rxdelay increases the window for duplicate detection, improving efficiency but adding latency.
+  - Too high values can slow down message propagation unnecessarily.
+
+- **Best practice:**
+  - Tune rxdelay based on network density and traffic patterns. For most mesh deployments, a small rxdelay (e.g., 1-5 ms) balances speed and efficiency.
+
+**Example scenario:**
+In a dense mesh, Node A and Node B both receive a flood packet. With rxdelay set, Node B may receive a duplicate from Node A during the delay window and suppress its own retransmission, reducing network load.
+
+**Summary:**
+rxdelay is a key tool for efficient mesh flooding and duplicate suppression, not just for simulating latency.
 
 #### Summary Table
 
@@ -804,7 +821,42 @@ The `rxdelay` parameter adds a base delay to the processing of received packets.
 | txdelay   | Small, fast, low-traffic networks | Large, dense, high-traffic networks | Reduces collisions at the cost of speed |
 | rxdelay   | Normal operation (keep at 0) | Testing, debugging, simulating latency | Not for production use |
 
-These settings are powerful tools for tuning network performance and reliability. Adjust them based on your deployment size, density, and testing needs.
+
+These settings are powerful tools for tuning network performance, reliability, and efficiency. Adjust them based on your deployment size, density, and testing needs.
+# Deep Code-Driven CLI Command Reference
+...existing code...
+
+---
+
+## Additional Code-Driven Notes and Corrections
+
+- **clear stats**: Also resets all internal counters used for diagnostics, not just user-facing stats. Useful before automated tests.
+
+- **log start/stop/erase**: Logging is only for received packets, not all events. Erasing logs does not affect system operation.
+
+- **set radio**: If invalid parameters are provided, the command is rejected and no changes are made. Requires reboot to take effect.
+
+- **set tx**: Setting a value outside hardware or regulatory limits may be ignored or clamped by the firmware. Always check the board's capabilities.
+
+- **tempradio**: Temporary settings override persistent ones only for the specified duration or until reboot. If the timeout is too short or parameters are invalid, the command is ignored.
+
+- **set name**: Names with forbidden characters ([, ], \, :, ,, ?, *) are rejected by the code. Max length is enforced per board.
+
+- **set prv.key**: Only valid, properly formatted keys are accepted. Invalid keys are rejected with an error.
+
+- **setperm**: Omitting the permissions argument removes the entry from the ACL, not just disables it.
+
+- **region load**: Indentation in the region list is significant and creates parent-child relationships. Max depth is 8 levels.
+
+- **region allowf/denyf**: Wildcard `*` applies to all regions without a specific code.
+
+- **gps**: The output includes status, fix, and satellite count. If GPS is not present or enabled, the command returns an error or 'off'.
+
+- **sensor set**: Only custom or supported sensor keys can be set. Invalid keys are rejected.
+
+- **bridge commands**: All bridge-related settings are only available if the firmware is compiled with bridge support. Invalid values (e.g., out-of-range baud/channel) are rejected.
+
+---
 
 ---
 
