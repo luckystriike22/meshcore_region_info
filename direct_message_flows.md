@@ -32,19 +32,19 @@ Direct messages are designed for privacy, reliability, and flexibility in routin
 
 ```mermaid
 flowchart TD
-    A[Sender: Send direct message with path] --> B[Repeater1: Is my hash first in path?]
-    B -- Yes --> C[Remove self from path]
-    C --> D[Forward to next node in path]
+    A[Sender:<br>Send direct<br>message with path] --> B[Repeater1:<br>Is my hash<br>first in path?]
+    B -- Yes --> C[Remove self<br>from path]
+    C --> D[Forward to next<br>node in path]
     B -- No --> E[Ignore packet]
-    D --> F[Repeater2: Is my hash first in path?]
-    F -- Yes --> G[Remove self from path]
-    G --> H[Forward to next node in path]
+    D --> F[Repeater2:<br>Is my hash<br>first in path?]
+    F -- Yes --> G[Remove self<br>from path]
+    G --> H[Forward to next<br>node in path]
     F -- No --> I[Ignore packet]
-    H --> J[Receiver: Is my hash first in path?]
+    H --> J[Receiver:<br>Is my hash<br>first in path?]
     J -- Yes --> K[Process message]
     J -- No --> L[Ignore packet]
     subgraph Non-path repeater
-        M[RepeaterX: Is my hash first in path?]
+        M[RepeaterX:<br>Is my hash<br>first in path?]
         M -- No --> N[Ignore packet]
     end
 ```
@@ -55,11 +55,11 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A[Sender: Send direct message as flood] --> B[Repeater1: Forward packet]
-    B --> C[Repeater2: Forward packet]
-    C --> D[RepeaterX: Forward packet]
-    D --> E[Receiver: Process message]
-    B --> F[Other repeaters: Forward packet]
+    A[Sender:<br>Send direct<br>message as flood] --> B[Repeater1:<br>Forward packet]
+    B --> C[Repeater2:<br>Forward packet]
+    C --> D[RepeaterX:<br>Forward packet]
+    D --> E[Receiver:<br>Process message]
+    B --> F[Other repeaters:<br>Forward packet]
     F --> E
     C --> F
 ```
@@ -70,7 +70,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A[Sender: Send direct message] --> B[Receiver: Is nearby?]
+    A[Sender:<br>Send direct<br>message] --> B[Receiver:<br>Is nearby?]
     B -- Yes --> C[Process message]
     B -- No --> D[No delivery]
 ```
