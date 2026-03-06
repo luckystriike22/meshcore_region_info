@@ -12,7 +12,7 @@
 - [7 Interesting links](#7-interesting-links)
 
 # Do I need a new bootloader?
-When you are using a nRF52, you'll probably need a new bootloader created by oltaco. The default booloader will have a high change of failing (50/50).
+When you are using a nRF52, you'll probably need a new bootloader created by oltaco. The default booloader will have a high change of failing (50/50).https://github.com/oltaco/Adafruit_nRF52_Bootloader_OTAFIX/releases
 
 ## How do I install the bootloader
 1. Download the bootloader file. The file should start with `update-` and end with `.uf2`. Search for the current release and you devive. So for a wismesh tag search for eaxample: `update-wismesh_tag_bootloader-0.9.2-OTAFIX2.1-BP1.2_nosd.uf2
