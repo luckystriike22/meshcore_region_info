@@ -1,15 +1,8 @@
 ## Table of Contents
 
-- [1. Meshcore region guide](#1-meshcore-region-guide)
-- [2. The core concept](#2-the-core-concept)
-- [3. Important notes](#3-important-notes)
-- [4. Setting a region on your repeater](#4-setting-a-region-on-your-repeater)
-  - [4.1 What does it mean?](#41-what-does-it-mean)
-  - [4.2 Set region via Command line](#42-set-region-via-command-line)
-  - [4.2 Set region in App](#42-set-region-in-app)
-- [5. Add regions that can be used for channels (client app)](#5-add-regions-that-can-be-used-for-channels-client-app)
-- [6 Flow charts](#6-flow-charts)
-- [7 Interesting links](#7-interesting-links)
+- [Do I need a new bootloader?](#do-i-need-a-new-bootloader)
+  - [How do I install the bootloader](#how-do-i-install-the-bootloader)
+- [How to OTA update](#how-to-ota-update)
 
 # Do I need a new bootloader?
 When you are using a nRF52, you'll probably need a new bootloader created by oltaco. The default booloader will have a high change of failing (50/50).https://github.com/oltaco/Adafruit_nRF52_Bootloader_OTAFIX/releases
